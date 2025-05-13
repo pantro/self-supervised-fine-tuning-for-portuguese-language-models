@@ -1,6 +1,6 @@
 # Master's dissertation: Analysis of self-supervised approaches for fine-tuning language models for Portuguese tasks
 
-This repository contains the code, datasets, and resources used for the doctoral dissertation **"Analysis of self-supervised approaches for fine-tuning language models for Portuguese tasks"**. This research addresses the challenges of adapting pre-trained language models for specific domains with limited labeled data, proposing a self-supervised fine-tuning approach for the BERTimbau Portuguese language model.
+This repository contains the code, datasets, and resources used for the master dissertation **"Analysis of self-supervised approaches for fine-tuning language models for Portuguese tasks"**. This research addresses the challenges of adapting pre-trained language models for specific domains with limited labeled data, proposing a self-supervised fine-tuning approach for the BERTimbau Portuguese language model.
 
 ## Abstract
 
