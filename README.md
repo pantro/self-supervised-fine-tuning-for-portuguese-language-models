@@ -1,26 +1,14 @@
-# Master's dissertation: Analysis of self-supervised approaches for fine-tuning language models for Portuguese tasks
+# Paper: Reducing Dependence on Labeled Data: A Self-Supervised Fine-Tuning Approach for Low-Resource Language Models
 
-This repository contains the code, datasets, and resources used for the doctoral dissertation **"Analysis of self-supervised approaches for fine-tuning language models for Portuguese tasks"**. This research addresses the challenges of adapting pre-trained language models for specific domains with limited labeled data, proposing a self-supervised fine-tuning approach for the BERTimbau Portuguese language model.
+This repository contains the code, datasets, and resources used for the paper **"Reducing Dependence on Labeled Data: A Self-Supervised Fine-Tuning Approach for Low-Resource Language Models"**. This research addresses the challenges of adapting pre-trained language models for specific domains with limited labeled data, proposing a self-supervised fine-tuning approach for the BERTimbau Portuguese language model.
 
 ## Abstract
 
-Organizations often face the limitation of having a small amount of labeled data to calibrate and refine their language models (LMs) in specific contexts. This scarcity of annotated data presents a significant challenge, as the quality and quantity of data are critical to the performance and generalization of the models. Furthermore, the acquisition or creation of labeled data is often expensive and time-consuming, creating a barrier to implementing tailored machine learning solutions.
-
-In the literature, similar challenges have been addressed through self-supervised fine-tuning using various pre-training approaches. However, to our knowledge, no detailed description or evaluation of such training protocols existed for LMs in Portuguese. 
-
-This dissertation proposes an adaptation of the BERTimbau pre-training protocol to a self-supervised fine-tuning procedure. We evaluated this procedure's impact on generalization and downstream tasks using unlabeled data. Experiments were conducted on three datasets from different domains, testing various configurations by unfreezing different layers of the model and using diverse learning rate settings. The results, focused on sentiment analysis as a downstream task, revealed that unfreezing only the last layer already yields good results. This enables users with limited computational resources to achieve excellent outcomes. Additionally, the effectiveness of self-supervised fine-tuning on larger datasets was highlighted, suggesting its potential for future research with more advanced pre-trained LMs.
-
-## Research Questions
-
-This research aims to answer the following questions:
-
-1. **RQ 1**: How to adapt the pretraining protocol of BERTimbau for a self-supervised fine-tuning procedure on that model?
-2. **RQ 2**: How does using unlabeled data in a specific domain in the proposed self-supervised fine-tuning approach impact BERTimbau's downstream performance and its generalization ability?
-3. **RQ 3**: In which scenarios (e.g., data availability, type of domain) is it suitable to use that self-supervised fine-tuning approach?
+The development of domain-specific language models faces limitations due to the scarcity of labeled data, which is costly and time-consuming to obtain. This challenge is especially relevant in low-resource languages such as Portuguese. To address this, we investigate a self-supervised fine-tuning strategy based on the BERTimbau pre-training protocol, aiming to enhance Language Model generalization without relying on annotated data. Our approach explores different combinations of unfrozen layers and hyperparameters. We evaluate its effectiveness on three sentiment analysis datasets in Portuguese from distinct domains. Results show that unfreezing only the final layer, combined with a suitable learning rate, achieves competitive performance compared to the traditional fine-tuning approach. This demonstrates the method’s viability in low-resource settings and its scalability to larger unlabeled datasets.
 
 ## Key Contributions
 
-- Adaptation of the **BERTimbau** pre-training protocol to a self-supervised fine-tuning approach for Portuguese language tasks.
+- Adaptation of the **BERTimbau Base** pre-training protocol to a self-supervised fine-tuning approach for Portuguese language tasks.
 - Evaluation of how self-supervised fine-tuning affects downstream performance and generalization using unlabeled domain-specific data.
 - Experiments exploring various configurations (e.g., layer unfreezing and learning rate settings) to identify an optimal training regime.
 - Insights into how computationally efficient methods can be used to achieve significant performance improvements, particularly for users with limited resources.
@@ -102,9 +90,3 @@ This research aims to answer the following questions:
     - `MultiClass_SSL-BERTimbauBase_UTLCmovies_12layers_1e5.ipynb`: Multiclass downstream task with the model obtained from self-supervised learning by unfreezing only the 12 last layer and with the LR equal to 1e-5.
     - `MultiClass_SSL-BERTimbauBase_UTLCmovies_12layers_1e6.ipynb`: Multiclass downstream task with the model obtained from self-supervised learning by unfreezing only the 12 last layer and with the LR equal to 1e-6.
     
-
-## Usage
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/pantro/self-supervised-fine-tuning-for-portuguese-language-models.git
-   cd self-supervised-fine-tuning-for-portuguese-language-models
